@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Compare example TripsHorizon travel options and review your trip estimate." />
+  <title>Search & reservation — TripsHorizon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="reservation.css" />
+</head>
+<body class="reservation-page">
+  <div class="announcement">✈ &nbsp; Your next adventure is taking shape. Review your options below.</div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="TripsHorizon home"><span class="brand-mark">✦</span><span>Trips<span class="brand-light">Horizon</span></span></a>
+    <nav class="main-nav reservation-nav"><a href="index.html">Home</a><a href="index.html#destinations">Explore</a><a href="index.html#stays">Stays</a><a href="index.html#cars">Cars</a></nav>
+    <div class="header-actions"><span class="secure-note">✧ Your trip, your way</span><a class="signin" href="index.html">Back to home</a></div>
+  </header>
+
+  <main class="reservation-main">
+    <section class="reservation-intro">
+      <a class="back-link" href="index.html#search">← Edit your search</a>
+      <div class="eyebrow dark-eyebrow">LET'S MAKE IT HAPPEN</div>
+      <h1>Find the right <em>way to go.</em></h1>
+      <p>Compare options, see an estimated total and review your trip details.</p>
+    </section>
+
+    <section class="reservation-search-card" aria-label="Edit your travel search">
+      <div class="reservation-search-top"><div><span class="search-kicker">YOUR SEARCH</span><h2 id="searchHeading">Flight options</h2></div><span class="demo-pill">DEMO INVENTORY</span></div>
+      <form id="reservationSearchForm" class="reservation-search-form">
+        <div class="field"><label for="resFrom" id="resFromLabel">FROM</label><input id="resFrom" name="from" required></div>
+        <button type="button" id="resSwap" class="swap" aria-label="Swap locations">⇄</button>
+        <div class="field"><label for="resTo" id="resToLabel">TO</label><input id="resTo" name="to"></div>
+        <div class="field"><label for="resDate" id="resDateLabel">DEPARTURE</label><input id="resDate" name="date" type="date" required></div>
+        <div class="field"><label for="resReturn" id="resReturnLabel">RETURN</label><input id="resReturn" name="returnDate" type="date"></div>
+        <div class="field"><label for="resGuests" id="resGuestsLabel">TRAVELLERS</label><select id="resGuests" name="travellers"><option value="1">1 traveller</option><option value="2">2 travellers</option><option value="3">3 travellers</option><option value="4">4 travellers</option><option value="5">5 travellers</option><option value="6">6 travellers</option></select></div>
+        <button class="search-button" type="submit">Update search <span>→</span></button>
+      </form>
+      <p class="search-disclaimer">These are sample options and estimated prices for demonstrating the booking journey. No supplier availability or live price has been checked.</p>
+    </section>
+
+    <div class="reservation-layout">
+      <section class="results-column">
+        <div class="results-heading"><div><span class="search-kicker">CURATED FOR YOUR JOURNEY</span><h2 id="resultsTitle">Available options</h2></div><span class="results-count" id="resultsCount">3 sample options</span></div>
+        <div id="resultsList" class="results-list" aria-live="polite"></div>
+      </section>
+      <aside class="trip-summary" aria-label="Trip price summary">
+        <div class="summary-top"><span>✦ YOUR TRIP SUMMARY</span><span class="summary-status">ESTIMATE</span></div>
+        <h2 id="summaryTitle">Your journey</h2>
+        <div class="summary-route"><div><small id="summaryFromLabel">FROM</small><strong id="summaryFrom">—</strong></div><span>→</span><div><small id="summaryToLabel">TO</small><strong id="summaryTo">—</strong></div></div>
+        <div class="summary-details"><div><span>Travel date</span><strong id="summaryDate">—</strong></div><div><span>Travellers / guests</span><strong id="summaryGuests">1</strong></div><div><span>Selected option</span><strong id="summaryOption">Choose an option</strong></div></div>
+        <div class="summary-total"><span>Estimated total</span><strong id="summaryTotal">$0</strong><small id="summaryPerPerson">Select an option to calculate your estimate.</small></div>
+        <button class="continue-button" id="continueButton" type="button" disabled>Continue on WhatsApp <span>↗</span></button>
+        <p class="summary-fineprint">Continue directly to WhatsApp with your selected trip details. This is a demo enquiry; reception must confirm availability and final pricing before payment.</p>
+      </aside>
+    </div>
+
+    <section class="traveller-details" id="travellerDetails" hidden>
+      <div class="details-heading"><span class="search-kicker">ALMOST THERE</span><h2>Who's travelling?</h2><p>Enter your contact details so our reception team can help confirm your request.</p></div>
+      <form id="travellerForm" class="traveller-form">
+        <div class="field"><label for="fullName">FULL NAME</label><input id="fullName" name="fullName" autocomplete="name" placeholder="Your full name" required></div>
+        <div class="field"><label for="emailAddress">EMAIL ADDRESS</label><input id="emailAddress" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+        <div class="field"><label for="phoneNumber">PHONE NUMBER</label><input id="phoneNumber" name="phone" type="tel" autocomplete="tel" placeholder="Include country code" required></div>
+        <label class="consent-line"><input type="checkbox" required> I understand this is a reservation enquiry, not a confirmed supplier booking. TripsHorizon reception will confirm availability, final price and payment instructions.</label>
+        <button class="search-button" type="submit">Send reservation request <span>→</span></button>
+      </form>
+      <div id="reservationConfirmation" class="confirmation-box" role="status" hidden></div>
+    </section>
+  </main>
+
+  <footer class="footer reservation-footer"><a class="brand footer-brand" href="index.html"><span class="brand-mark">✦</span><span>Trips<span class="brand-light">Horizon</span></span></a><p>Go find the extraordinary.</p><small>© 2026 TripsHorizon. Prototype only — sample options are not live inventory.</small></footer>
+
+  <script src="reservation.js"></script>
+</body>
+</html>

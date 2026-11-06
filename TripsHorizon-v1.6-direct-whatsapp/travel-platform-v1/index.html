@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Discover unforgettable places, compare stays and plan your next adventure." />
+  <title>TripsHorizon — Find your somewhere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">✈ &nbsp; Big adventures start here. Discover your next escape.</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="TripsHorizon home"><span class="brand-mark">✦</span><span>Trips<span class="brand-light">Horizon</span></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a class="active" href="#home">Home</a><a href="#destinations">Explore</a><a href="#stays">Stays</a><a href="#cars">Cars</a><a href="#deals">Deals</a>
+    </nav>
+    <div class="header-actions"><button class="text-button" id="currencyBtn">USD ▾</button><button class="signin" id="signInBtn">Sign in</button><button class="join" id="joinBtn">Join for free</button></div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-image"></div><div class="hero-shade"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span></span> YOUR NEXT CHAPTER STARTS OUT THERE</div>
+        <h1>Find your<br><em>somewhere.</em></h1>
+        <p>Big skies, hidden gems and stories worth telling.<br class="desktop-only"> Let’s make your next trip unforgettable.</p>
+        <a class="hero-link" href="#search">Plan an adventure <span>↗</span></a>
+      </div>
+      <div class="hero-sticker"><span>✹</span><strong>GO<br>BEYOND</strong><small>the ordinary</small></div>
+      <div class="hero-caption">THE WORLD IS WAITING · 01 / 04</div>
+    </section>
+
+    <section class="search-wrap" id="search">
+      <div class="search-card">
+        <div class="search-tabs" role="tablist" aria-label="What are you booking?">
+          <button class="tab active" data-tab="flights" role="tab" aria-selected="true">✈ Flights</button>
+          <button class="tab" data-tab="hotels" role="tab" aria-selected="false">▦ Stays</button>
+          <button class="tab" data-tab="cars" role="tab" aria-selected="false">⌑ Cars</button>
+        </div>
+        <form id="travelSearch" class="search-form">
+          <div class="field"><label for="fromField" id="fromLabel">FROM</label><input id="fromField" placeholder="City or airport" value="New York (JFK)" required></div>
+          <button class="swap" type="button" id="swapBtn" aria-label="Swap locations">⇄</button>
+          <div class="field"><label for="toField" id="toLabel">TO</label><input id="toField" placeholder="Where to?" value="Lisbon (LIS)" required></div>
+          <div class="field"><label for="dateField" id="dateLabel">DEPARTURE</label><input id="dateField" type="date" required></div>
+          <div class="field compact-field"><label for="travellersField" id="travellersLabel">TRAVELLERS</label><select id="travellersField"><option>1 traveller</option><option>2 travellers</option><option>3 travellers</option><option>4 travellers</option><option>5+ travellers</option></select></div>
+          <button class="search-button" type="submit">Search <span>→</span></button>
+        </form>
+        <div class="search-note"><span>✓</span> No booking fees on selected stays <span class="dot">·</span> Flexible options available</div>
+      </div>
+    </section>
+
+    <section class="trust-row"><div><b>✦ 4.8/5</b><span>Traveller love</span></div><div><b>◎ 190+ countries</b><span>Ready to explore</span></div><div><b>♡ Made for discovery</b><span>Every kind of traveller</span></div><div><b>☼ 24/7 support</b><span>Here when you need us</span></div></section>
+
+    <section class="section destinations" id="destinations">
+      <div class="section-heading"><div><div class="eyebrow dark-eyebrow">A WORLD OF POSSIBILITIES</div><h2>Where to <em>next?</em></h2><p>Fresh inspiration for wherever your curiosity takes you.</p></div><a class="outline-link" href="#destinations">Explore all places <span>↗</span></a></div>
+      <div class="destination-grid">
+        <a class="destination-card destination-large" href="destination.html?place=santorini" aria-label="Explore Santorini, Greece"><img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1100&q=85" alt="Santorini white buildings overlooking the sea"><div class="destination-info"><span>GREECE · EUROPE</span><h3>Santorini</h3><p>Sunsets that stay with you</p></div><span class="card-arrow">↗</span></a>
+        <a class="destination-card" href="destination.html?place=bali" aria-label="Explore Bali, Indonesia"><img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=900&q=85" alt="Bali tropical landscape"><div class="destination-info"><span>INDONESIA · ASIA</span><h3>Bali</h3><p>Find your island rhythm</p></div><span class="card-arrow">↗</span></a>
+        <a class="destination-card" href="destination.html?place=dubai" aria-label="Explore Dubai, UAE"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=85" alt="Dubai skyline at sunset"><div class="destination-info"><span>UAE · MIDDLE EAST</span><h3>Dubai</h3><p>Dream bigger here</p></div><span class="card-arrow">↗</span></a>
+        <a class="destination-card" href="destination.html?place=cinque-terre" aria-label="Explore Cinque Terre, Italy"><img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=85" alt="Colourful Cinque Terre coastal village"><div class="destination-info"><span>ITALY · EUROPE</span><h3>Cinque Terre</h3><p>Take the scenic route</p></div><span class="card-arrow">↗</span></a>
+      </div>
+    </section>
+
+    <section class="deal-banner" id="deals"><div class="deal-copy"><div class="eyebrow">A LITTLE MORE ADVENTURE FOR LESS</div><h2>Make room for<br><em>one more trip.</em></h2><p>Discover hand-picked escapes and limited-time inspiration for your next getaway.</p><a href="#search" class="light-button">Find your deal <span>↗</span></a><small>*Sample promotional content for this prototype.</small></div><div class="deal-art"><div class="sun"></div><div class="deal-stamp">GO<br>EXPLORE<br>✦</div></div></section>
+
+    <section class="section stays" id="stays"><div class="section-heading"><div><div class="eyebrow dark-eyebrow">STAY SOMEWHERE SPECIAL</div><h2>Good nights. <em>Great stories.</em></h2><p>Places with personality, picked for the way you travel.</p></div><a class="outline-link" href="#search">Find a stay <span>↗</span></a></div>
+      <div class="stay-grid">
+        <article class="stay-card"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=85" alt="Pool at a tropical resort"><div class="stay-body"><div class="stay-meta"><span>★ 4.9 · Exceptional</span><span class="price">From <b>$184</b>/night</span></div><h3>The Palm House Retreat</h3><p>Ubud, Bali · Boutique resort</p></div></article>
+        <article class="stay-card"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=85" alt="Luxury hotel pool overlooking the sea"><div class="stay-body"><div class="stay-meta"><span>★ 4.8 · Excellent</span><span class="price">From <b>$220</b>/night</span></div><h3>Azure Coast Hotel</h3><p>Mykonos, Greece · Sea view</p></div></article>
+        <article class="stay-card"><img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=900&q=85" alt="Cosy design hotel room"><div class="stay-body"><div class="stay-meta"><span>★ 4.7 · Wonderful</span><span class="price">From <b>$139</b>/night</span></div><h3>The City Chapter</h3><p>Lisbon, Portugal · Design hotel</p></div></article>
+      </div>
+    </section>
+
+    <section class="section car-rentals" id="cars">
+      <div class="section-heading"><div><div class="eyebrow dark-eyebrow">THE ROAD IS YOURS</div><h2>Pick a ride. <em>Go further.</em></h2><p>From quick city breaks to open-road adventures, find a ride that fits your journey.</p></div><a class="outline-link" href="#search" data-car-search>Find a car <span>↗</span></a></div>
+      <div class="car-grid">
+        <article class="car-card">
+          <div class="car-photo"><img src="https://getrentacar.com/storage/cache/images/960-640-100-fit-693569.jpeg" alt="Blue compact sedan, example rental car"><span class="car-tag">CITY FAVOURITE</span></div>
+          <div class="car-body"><div class="car-type">COMPACT · AUTOMATIC</div><h3>City Explorer</h3><p class="car-desc">An easy-to-park everyday ride for city streets and short getaways.</p><div class="car-specs"><span>♙ 5 seats</span><span>▣ 2 bags</span><span>❄ A/C</span></div><div class="car-bottom"><div><strong>From $39</strong><small>/ day · sample rate</small></div><button class="car-book" data-car="City Explorer">View car <span>↗</span></button></div></div>
+        </article>
+        <article class="car-card">
+          <div class="car-photo"><img src="https://www.nissanrent.com/media/2024/05/NRAC_Nissan-Rogue_1080x650.jpg" alt="Modern grey SUV, example rental car"><span class="car-tag car-tag-coral">ADVENTURE READY</span></div>
+          <div class="car-body"><div class="car-type">MID-SIZE SUV · AUTOMATIC</div><h3>Open-Road SUV</h3><p class="car-desc">Extra room for luggage, friends and spontaneous detours.</p><div class="car-specs"><span>♙ 5 seats</span><span>▣ 3 bags</span><span>❄ A/C</span></div><div class="car-bottom"><div><strong>From $58</strong><small>/ day · sample rate</small></div><button class="car-book" data-car="Open-Road SUV">View car <span>↗</span></button></div></div>
+        </article>
+        <article class="car-card">
+          <div class="car-photo"><img src="https://www.sustainabletourism.nz/assets/Uploads/GO-Rentals-Tesla.jpg" alt="White electric sedan, example rental car"><span class="car-tag car-tag-green">LOW-EMISSION PICK</span></div>
+          <div class="car-body"><div class="car-type">ELECTRIC · AUTOMATIC</div><h3>Electric Escape</h3><p class="car-desc">A quiet, modern drive for exploring with fewer tailpipe emissions.</p><div class="car-specs"><span>♙ 5 seats</span><span>▣ 2 bags</span><span>⚡ EV</span></div><div class="car-bottom"><div><strong>From $72</strong><small>/ day · sample rate</small></div><button class="car-book" data-car="Electric Escape">View car <span>↗</span></button></div></div>
+        </article>
+      </div>
+      <p class="car-disclaimer">Example vehicles and illustrative prices for the TripsHorizon prototype. Vehicle models, availability, insurance, mileage and final rates will depend on the rental partner and pick-up location.</p>
+    </section>
+
+    <section class="newsletter"><div><div class="eyebrow">POSTCARDS, NOT SPAM</div><h2>A little wanderlust<br>in your inbox.</h2><p>Get destination ideas, fresh finds and occasional offers.</p></div><form id="newsletterForm"><label for="emailField">YOUR EMAIL ADDRESS</label><div class="email-row"><input id="emailField" type="email" placeholder="you@example.com" required><button type="submit">Count me in ↗</button></div><small>By subscribing, you agree to receive travel updates. You can unsubscribe anytime.</small></form></section>
+  </main>
+
+  <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">✦</span><span>Trips<span class="brand-light">Horizon</span></span></a><p>Go find the extraordinary.</p><div class="footer-links"><a href="#destinations">Explore</a><a href="#stays">Stays</a><a href="#cars">Cars</a><a href="#deals">Deals</a><a href="mailto:hello@example.com">Contact</a><a href="#home">Privacy</a></div><small>© 2026 TripsHorizon. A travel platform concept. Demo listings and prices are illustrative.</small></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Floating quick-answer travel assistant. Replies are demo logic until an AI service is connected. -->
+  <button class="th-chat-launcher" id="thChatLauncher" type="button" aria-label="Open TripsHorizon travel assistant" aria-expanded="false" aria-controls="thChatPanel">
+    <span class="chat-spark" aria-hidden="true">✦</span><span class="chat-online" aria-hidden="true"></span><span class="th-chat-label">Ask our travel assistant</span>
+  </button>
+  <section class="th-chat-panel" id="thChatPanel" role="dialog" aria-label="TripsHorizon travel assistant" aria-modal="false">
+    <div class="th-chat-head">
+      <div class="th-chat-avatar" aria-hidden="true">✦</div>
+      <div class="th-chat-title"><strong>Horizon Assistant</strong><span>● Here to help you explore</span></div>
+      <button class="th-chat-close" id="thChatClose" type="button" aria-label="Close chat">×</button>
+    </div>
+    <div class="th-chat-messages" id="thChatMessages" aria-live="polite" aria-relevant="additions">
+      <div class="th-chat-message bot">Hey, traveller! 👋 I'm the TripsHorizon assistant. I can help you explore destinations, understand our flight, stay and car search, or plan your next adventure. Where shall we start?</div>
+    </div>
+    <div class="th-chat-quick" id="thChatQuick">
+      <button type="button" data-question="Help me plan a trip">✈ Plan a trip</button>
+      <button type="button" data-question="Tell me about hotels and stays">⌂ Find a stay</button>
+      <button type="button" data-question="I need to rent a car">🚗 Rent a car</button>
+      <button type="button" data-question="How do flight searches work?">Flights</button>
+    </div>
+    <form class="th-chat-compose" id="thChatForm">
+      <input id="thChatInput" type="text" maxlength="500" placeholder="Ask me anything about travel..." autocomplete="off" aria-label="Type your travel question" required>
+      <button class="th-chat-send" type="submit" aria-label="Send message">➤</button>
+    </form>
+    <div class="th-chat-foot">Quick answers · Demo assistant · No live bookings yet</div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
